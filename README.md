@@ -63,19 +63,16 @@ Some scope shots:
 1. TX pattern transmitted ok
 ![tx_success](https://github.com/user-attachments/assets/d456dae8-4eb6-4554-ad74-d6f59c47daa4)
 
-2. Another TX ok
-![tx_success](https://github.com/user-attachments/assets/431ecc21-c37d-4215-8fdf-03ac49d6f48a)
-
-3. TX patther zoomed in
+2. TX patther zoomed in
 ![tx_success_zoomed_in](https://github.com/user-attachments/assets/5c3e03ba-4287-4d9f-8a41-ffe4e09d2fb7)
 
-4. TX abort and re-transmit
+3. TX abort and re-transmit
 ![tx_abort_re_send](https://github.com/user-attachments/assets/69dff075-9e5e-4fa9-a8dd-1f1d3c89f0af)
 
-5. TX abort zoomed in
+4. TX abort zoomed in
 ![tx_abort_zoomed_in](https://github.com/user-attachments/assets/4c8a8b76-a381-43a7-93c5-e204ef2543ef)
 
-6. Typical RX packet
+5. Typical RX packet
 ![rx_typical_packet](https://github.com/user-attachments/assets/3ce72683-ee2a-4c3c-921f-345c5dae3a07)
 
 A crude schematics for connecting an ESP-01S to the 4110XM/6148 system:
