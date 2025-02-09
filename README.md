@@ -20,8 +20,8 @@ engineered to achieve the objective as very limited information is available on 
 
 System architecture:
 Aside from power, ground, sensor pins, the 4110XM use DI and DO to communicate with the keypads. All keypads are wired in parallel
-so the 4110XM DO pin must be an open-drain type output. All keypads see the same data from 4110XM so they should all dim/light the 
-same LEDs and display the same messages.
+so the 4110XM DO pin must be an open-drain/collector type output. All keypads see the same data from 4110XM so they should all 
+dim/light the same LEDs and display the same messages.
 
 DI pin: Input of 4110XM. This is also the output of the keypad. Let's call it TX. Signaling is 12V and output is 0V when there is 
 nothing to send. There are 12 keys on the keypad: 0-9, #, *. Each key is encoded with an 8-bit patter. When a key is pressed, the 
@@ -58,4 +58,30 @@ RX challenge:
 
 To put them in use, combine the TX and RX code and use some sort of web services or app such that the emulator can be controlled on a
 smart phone. I was able to compile the codes into an ESP-01S board and use Blynk to control the keypad.
+
+Some scope shots:
+1. TX pattern transmitted ok
+![tx_success](https://github.com/user-attachments/assets/d456dae8-4eb6-4554-ad74-d6f59c47daa4)
+
+2. Another TX ok
+![tx_success](https://github.com/user-attachments/assets/431ecc21-c37d-4215-8fdf-03ac49d6f48a)
+
+3. TX patther zoomed in
+![tx_success_zoomed_in](https://github.com/user-attachments/assets/5c3e03ba-4287-4d9f-8a41-ffe4e09d2fb7)
+
+4. TX abort and re-transmit
+![tx_abort_re_send](https://github.com/user-attachments/assets/69dff075-9e5e-4fa9-a8dd-1f1d3c89f0af)
+
+5. TX abort zoomed in
+![tx_abort_zoomed_in](https://github.com/user-attachments/assets/4c8a8b76-a381-43a7-93c5-e204ef2543ef)
+
+6. Typical RX packet
+![rx_typical_packet](https://github.com/user-attachments/assets/3ce72683-ee2a-4c3c-921f-345c5dae3a07)
+
+A crude schematics for connecting an ESP-01S to the 4110XM/6148 system:
+<img width="1087" alt="Screen Shot 2025-02-08 at 8 03 49 PM" src="https://github.com/user-attachments/assets/94135ca8-1922-4327-9bf9-b1809fc9cb52" />
+
+
+
+
 
