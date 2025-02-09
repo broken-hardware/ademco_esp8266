@@ -1,6 +1,8 @@
 # ademco_esp8266
 ademco 6148 keypad emulator
 
+The TX/RX codes were completely authored by me through reverse engineering and carry no warranties whatsoever. 
+
 I have a home alarm system installed in 2007. It is based on Ademco 4110XM controller with 3 6148 keypads and various sensors.
 
 This system uses a land line to communicate with a central monitoring station where a real person will check the notifictions sent 
@@ -54,4 +56,6 @@ RX challenge:
 1. Very few info can be found regarding encoding and protocol of the 4110XM data packets so only a few essential functions were decoded.
 2. Since 2300 baud rate is not popular, the built-in hardware serial or software serial can't be used. Bit banging is used instead. 
 
+To put them in use, combine the TX and RX code and use some sort of web services or app such that the emulator can be controlled on a
+smart phone. I was able to compile the codes into an ESP-01S board and use Blynk to control the keypad.
 
