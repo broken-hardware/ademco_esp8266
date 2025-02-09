@@ -71,7 +71,7 @@ Some scope shots:
 5. Typical RX packet
 ![rx_typical_packet](https://github.com/user-attachments/assets/3ce72683-ee2a-4c3c-921f-345c5dae3a07)
 
-A crude schematics for connecting an ESP-01S to the 4110XM/6148 system:
+A crude schematics showing how an ESP-01S is wired to the 4110XM/6148 system:
 <img width="1087" alt="Screen Shot 2025-02-08 at 8 03 49 PM" src="https://github.com/user-attachments/assets/94135ca8-1922-4327-9bf9-b1809fc9cb52" />
 
 
