@@ -34,13 +34,13 @@ However it will cycle low at ~6Hz for about 14.5ms which is the TX window. In ad
 response messages on the same line every ~6s. This overrides TX window. With a scope, the 4110XM message is found to be made of the 
 following bits:
 
-1. Starting condition
+1. Starting condition:
    It begins with 14 0s and 14 1s at 2300 baud.
 
-2. Dwell time
+2. Dwell time:
    It stays low for roughly 3 bit time (435us x 3 = 1.3ms) but can vary up to 360us
 
-3. Header byte
+3. Header byte:
    11011111. Note that since the endianness is unknown, the bits are arranged as seen on the scope for easy human reading
 
 4. 6 bytes of payload followed by all 1s
@@ -60,16 +60,11 @@ To put them in use, combine the TX and RX code and use some sort of web services
 smart phone. I was able to compile the codes into an ESP-01S board and use Blynk to control the keypad.
 
 Some scope shots:
-1. TX pattern transmitted ok
-![tx_success](https://github.com/user-attachments/assets/d456dae8-4eb6-4554-ad74-d6f59c47daa4)
-2. TX patther zoomed in
-![tx_success_zoomed_in](https://github.com/user-attachments/assets/5c3e03ba-4287-4d9f-8a41-ffe4e09d2fb7)
-3. TX abort and re-transmit
-![tx_abort_re_send](https://github.com/user-attachments/assets/69dff075-9e5e-4fa9-a8dd-1f1d3c89f0af)
-4. TX abort zoomed in
-![tx_abort_zoomed_in](https://github.com/user-attachments/assets/4c8a8b76-a381-43a7-93c5-e204ef2543ef)
-5. Typical RX packet
-![rx_typical_packet](https://github.com/user-attachments/assets/3ce72683-ee2a-4c3c-921f-345c5dae3a07)
+1. TX pattern transmitted ok ![tx_success](https://github.com/user-attachments/assets/d456dae8-4eb6-4554-ad74-d6f59c47daa4)
+2. TX patther zoomed in ![tx_success_zoomed_in](https://github.com/user-attachments/assets/5c3e03ba-4287-4d9f-8a41-ffe4e09d2fb7)
+3. TX abort and re-transmit ![tx_abort_re_send](https://github.com/user-attachments/assets/69dff075-9e5e-4fa9-a8dd-1f1d3c89f0af)
+4. TX abort zoomed in ![tx_abort_zoomed_in](https://github.com/user-attachments/assets/4c8a8b76-a381-43a7-93c5-e204ef2543ef)
+5. Typical RX packet ![rx_typical_packet](https://github.com/user-attachments/assets/3ce72683-ee2a-4c3c-921f-345c5dae3a07)
 
 A crude schematics showing how an ESP-01S is wired to the 4110XM/6148 system:
 <img width="1087" alt="Screen Shot 2025-02-08 at 8 03 49 PM" src="https://github.com/user-attachments/assets/94135ca8-1922-4327-9bf9-b1809fc9cb52" />
